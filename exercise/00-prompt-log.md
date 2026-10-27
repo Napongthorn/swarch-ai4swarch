@@ -15,6 +15,6 @@
 | 2 | 1-B | Claude Code / Opus 5.5 | `prompts/1-…` run B | prompts/1-recover-architecture.md, demo.proto, kubernetes-manifests/ ทั้ง 13 ไฟล์ (รวม README.md, kustomization.yaml) | ใช่ | 5 | ได้ 12 container + 17 dependency จาก env var *_ADDR ตัด shoppingassistantservice ออกจากแผนภาพเพราะไม่มี manifest |
 | 3 | 2-a | Claude Code / Opus 5.5 | `prompts/2-…` run a, context: none, R-12, Thai | prompts/2-write-adr.md, docs/adr/template.md | ใช่ | 4 | เลือก pub/sub ผ่าน broker แต่ไม่มีตัวเลขจริงเลย เพราะไม่ได้อ่าน scenario มี Open questions 13 ข้อ |
 | 4 | 2-b | Claude Code / Opus 5.5 | `prompts/2-…` run b, context 3 ไฟล์, R-12, Thai | prompts/2-write-adr.md, docs/adr/template.md, docs/scenario.md, docs/adr/0001-use-redis-for-cart-storage.md, src/checkoutservice/main.go | ใช่ | 5 | เลือก RabbitMQ ใช้ตัวเลขจาก scenario ครบ อ้างบรรทัดใน main.go ได้ |
-| 5 | 3 | | `prompts/3-…` | | | | |
+| 5 | 3 | Claude Code / Opus 5.5 | `prompts/3-…` adr: 0002-use-rabbitmq-for-post-order-actions.md, Thai | prompts/3-review-adr.md, docs/adr/0002-use-rabbitmq-for-post-order-actions.md, docs/scenario.md | ใช่ | 5 | Accept with changes, จับได้ว่า outbox ยังมีรูระหว่างตัดเงินกับเขียน DB และ Validation วัดผิดเงื่อนไข 1 นาที |
 | 6 | | | | | | | |
 | 7 | | | | | | | |
